@@ -32,3 +32,7 @@ print(class(u))
 
 
 list <- 23L
+
+var_name2. =1
+
+print(var_name2.)
