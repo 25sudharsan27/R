@@ -1,4 +1,10 @@
+
+# c(..) it represents class it will have no of elements
+
 a <- c(10,4,3)
+
+
+
 b <- c(3,1,0)
 
 #Addition
@@ -18,5 +24,5 @@ print(a^b)
 
 print(ls())
 
-rm(a)
-print(ls())
+# rm(a)
+# print(ls())
