@@ -1,4 +1,4 @@
-a <- 0 # logical true
+a <- 12 # logical true
 b <- 2 # logical false
 
 print(a&b)
