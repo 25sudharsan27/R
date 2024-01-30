@@ -92,8 +92,28 @@ cat(crayon::blue("Hi"))
 # is.integer()
 # is.array()
 # is.character()
+# is.vector(x)
+# is.data.frame(df)
 
 
-print(as.integer("1234"))
 
 
+# print(as.integer("1234"))
+
+
+# Convert "A" to number
+# letter <- "A"
+# number <- utf8ToInt(letter) 
+# print(number)
+# 
+# print(intToUtf8(68))
+# 
+
+
+# colon operator and sqeuence operator
+
+a <- 1:7
+print(a)
+
+a <- seq(1,7,2)
+print(a)
