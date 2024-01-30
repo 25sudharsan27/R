@@ -16,7 +16,7 @@
 # if you don't know any keyword in the r language you can just run this command 
 # ? (keyword)
 
-# List 
+# List
 # a list is an R- object which can contain different types of elements inside it like 
 # funciton and another list inside it 
 
@@ -51,11 +51,49 @@ cat(crayon::blue("Hi"))
 #Boolean etc. in the input vector. They are useful in statistical model
 
 
-app = c('green','green','yellow','red','white','blue')
-app1= c(1,2,3,4,5)
+# app = c('green','green','yellow','red','white','blue','blue')
+# # in one level it will not store any duplicate values 
+# # factor may accept any matrix or vector or array
+# 
+# app1= array(c(1,2,3,4,5))
+# 
+# print("\n")
+# 
+# fac_app= factor(app1)
+# 
+# print(fac_app)
+# print(nlevels(fac_app))
+# 
+# 
 
-print("\n")
-fac_app= factor(app)
+# Data frames
+# it is a tabular kind of data type, it contains same length of array or vectors with different data types according to user need
+# most important each vector or array  should contains same length
 
-print(fac_app)
-print(nlevels(fac_app))
+# BMI = data.frame(gender=c("Male","Male","Female"),height=c(152,171.5,165),weight=c(81,93,78),Age=c(42,38,26))
+# print(BMI)
+# plot(c(1,2,3,5,6,7))
+# plot(BMI)
+# ?
+# plot(3,400000)
+# 
+# data.table(BMI) 
+
+
+# Type conversion as numeric
+# as.numeric()
+# as.integer()
+# as.array()
+# as.character()
+
+
+# check whether it is data type or not
+# is.numeric()
+# is.integer()
+# is.array()
+# is.character()
+
+
+print(as.integer("1234"))
+
+
