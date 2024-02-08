@@ -46,3 +46,25 @@ result <- apply(res,c(1),sum)
 ?c(1)
 
 result
+
+# creating data fraome
+
+emp_data <- data.frame(employee=c(1:5),employee_name=c("Sudharsan","Subash","Magesh","Raamnath","Divya"),sal=c(34534,4535,5536,2345,6444),starting_date=as.Date(c("2012-01-01","2013-09-23","2014-11-15","2014-05-11","2015-03-27")),stringsAsFactors=FALSE)
+emp_data
+
+final <- emp_data[1,]
+
+print(final)
+final <- emp_data[4,5,]
+print(final)
+
+
+x <- emp.data
+
+# Adding row in the data frame
+x <- list(6,"VAishali",537,"2015-09-01")
+rbind(emp_data,x)
+
+# Adding the column in the data frame
+y <- c("Moradabad","Lucknow","Etah","Sambhal","Kurja")
+cbind(emp_data,Address=y)
