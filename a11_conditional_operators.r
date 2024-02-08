@@ -20,6 +20,9 @@
 # 
 # 
 # 
+
+# the else or else if part shoudl have to stick wiith the if part then only iit will work properly otherwise it will throw error
+
 a =2
 if(a==1){
   print("block 1")

@@ -112,8 +112,28 @@ cat(crayon::blue("Hi"))
 
 # colon operator and sqeuence operator
 
-a <- 1:7
+a <- 4:-10
 print(a)
 
 a <- seq(1,7,2)
+
+a <- seq(1,4,length.out=6)
+# length.out is helps us to divide the range in to number of parts accroding to the user need
+
 print(a)
+
+a <- 10L
+
+
+print(a)
+print(typeof(a))
+print(class(a))
+
+# typeof used to show how much space is required to store the particular variable in the form of the string
+# class is just used to define what dataype the varaiable has
+
+# atomic we have to use same type of variable , function type, function length. 
+# vector iis also an atomic vector because it has only one ype of data type
+# it returns one dimensioal array or simply vector.
+
+
