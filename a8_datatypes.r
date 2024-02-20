@@ -54,17 +54,19 @@ cat(crayon::blue("Hi"))
 # app = c('green','green','yellow','red','white','blue','blue')
 # # in one level it will not store any duplicate values 
 # # factor may accept any matrix or vector or array
-# 
-# app1= array(c(1,2,3,4,5))
-# 
-# print("\n")
-# 
-# fac_app= factor(app1)
-# 
-# print(fac_app)
-# print(nlevels(fac_app))
-# 
-# 
+
+app1= array(c(1,2,3,4,5),c(6,7,8,9,10),dimnames=list(10,10,1) )
+
+array?
+
+print("\n")
+app1
+fac_app= factor(app1)
+fac_app
+print(fac_app)
+print(nlevels(fac_app))
+
+
 
 # Data frames
 # it is a tabular kind of data type, it contains same length of array or vectors with different data types according to user need
