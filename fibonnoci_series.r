@@ -165,6 +165,11 @@ for(i in seq(1:5)){
   cat("\n")
   
 }
+for(i in seq(5)){
+  for(j in seq(5:1)){
+    cat(i," ",j)
+  }
+}
 for(i in seq(5:1)){
   v <- 0
   for(j in seq(5:1)){
@@ -199,7 +204,15 @@ l
 # 
 # 
 
-
+v <- c("Hello","loop")
+count <- 2
+repeat {
+  print(v)
+  count <- count +1
+  if(count>5){
+    break
+  }
+}
 
 
 
