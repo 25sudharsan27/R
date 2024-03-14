@@ -1,7 +1,7 @@
-# # v <- TRUE
-# # print(class(v))
-# # name <- "first program in R"
-# # print(class(name))
+v <- TRUE
+print(class(v))
+name <- "first program in R"
+print(class(name))
 # # print(name)
 
 # # # Integer

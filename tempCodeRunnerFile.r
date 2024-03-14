@@ -1,3 +1,4 @@
-raw_variable <- charToRaw("Welcome to Programiz")
+a <- 8
+b <<- 200
 
-print(raw_variable)
+print(b)
