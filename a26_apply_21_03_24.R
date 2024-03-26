@@ -20,3 +20,6 @@ print(result)
 
 
 # Perform the same kind of activity with the multiple vectors
+
+
+
