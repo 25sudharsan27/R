@@ -44,5 +44,32 @@ library(imager)
 xy <- load.image("vds9S.png")
 head(as.data.frame(xy))
 
+x<-c(NA,3,4,NA,0/0,NA)
+is.nan(x)
+
+# if youwant to remove the not available dataes you can use this method
+
+d<- is.na(x)
+d
+y <- x[d]
+is.nan(y)
 
 
+# missing value filter functiosn
+
+# na.omit  omit every row containing even one NA
+# na.fail
+# na.exclude
+# na.pass
+
+df <- data.frame(c1=1:8 , c2=factor(c("B","A","B","C","A","C","B","A")))
+
+df[4,1] <- df[6,2] <- NA
+
+levels(df$c2)
+
+na.fail(df)
+
+na.pass(df)
+na.omit(df)
+na.exclude(df)
