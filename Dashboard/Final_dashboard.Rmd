@@ -1,0 +1,162 @@
+---
+title: "Sales Dashboard"
+author: "Sudharsan B"
+date: "2024-04-15"
+output: html_document
+---
+
+# Dashboard using R Programming
+
+## Data
+
+```{r}
+library(readr)
+library(scales)
+data = read.csv("data.csv")
+head(data,10)
+```
+
+### Objective 1
+
+-   Aims to monitor the total sales collected on a monthly basis for the years 2020 and 2021.
+-   This involves tracking the sum of sales values recorded each month throughout these two years.
+-   By collecting and visualizing this data, stakeholders can gain insights into the sales performance over time, identify patterns or trends in sales, and make informed decisions to improve sales strategies or allocate resources effectively.
+-   The objective is to provide a clear understanding of how sales have varied from month to month across the specified time period.
+
+#### By using Graph
+
+```{r}
+df <- data.frame(Date = as.Date(data$Invoice.Date, format = "%m/%d/%Y"), Value = data$Total.Sales)
+# Convert Date column to year-month format
+
+library(zoo)
+df$Date <- as.yearmon(df$Date)
+
+df$Value <- as.numeric(df$Value)
+
+# Filter and summarise
+library(dplyr)
+
+library(scales)
+library(ggplot2)
+
+d <- df %>%
+  group_by(Date) %>%
+  summarise(total_value = sum(Value, na.rm = TRUE))
+
+
+# Assuming 'd' contains the summarized data
+ggplot(d, aes(x = Date, y = total_value, group = 1)) +
+  geom_line(color = "black") +
+  geom_point(color = "orange") + # Add points for better visualization
+  labs(x = "Date", y = "Total Value") +
+  scale_y_continuous(labels = scales::dollar_format(scale = 1e-0)) +  # Adjust scale as needed
+  theme_dark() + # Set the theme to dark
+  theme(panel.background = element_rect(fill = "white"),
+        panel.grid.major = element_blank(),  # Remove major grid lines
+        panel.grid.minor = element_blank(),  # Remove minor grid lines
+        panel.border = element_blank())
+
+
+```
+
+### Objective 2
+
+-   This is to visually analyze the earnings of different retailers in comparison to the total earnings using a pie chart.
+-   This involves collecting earnings data for each retailer, aggregating the data to calculate total earnings per retailer, and then representing these proportions in a pie chart to gain insights into each retailer's contribution to the overall earnings
+
+```{r}
+df1 = data.frame(Date = as.Date(data$Invoice.Date, format = "%m/%d/%Y"),Retailers = data$Retailer,Total_Sales= data$Total.Sales)
+head(df1,10)
+
+library(dplyr)
+
+
+library(scales)
+library(ggplot2)
+
+df_agg <- df1 %>%
+  group_by(Retailers) %>%
+  summarise(Total_Earnings = sum(Total_Sales)) %>%
+  arrange(desc(Total_Earnings))
+# Analyze the Retailers Earnings with Total Earnings using Pie Chart 
+
+ggplot(df_agg, aes(x = "", y = Total_Earnings, fill = Retailers)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar("y", start = 0) +
+  theme_void() +
+  theme(legend.position = "right") +
+  labs(title = "Retailer wise Distribution",
+       fill = "Retailers",
+       y = "Total Earnings")
+
+
+```
+
+### Objective 3
+
+-   The objective is to analyze the earnings of different regions and compare them to the total earnings using a pie chart.
+-   This entails gathering earnings data categorized by region, aggregating the data to compute total earnings for each region, and subsequently visualizing these proportions in a pie chart.
+-   The aim is to understand the distribution of earnings across various regions and to identify which regions contribute the most to the overall earnings.
+
+```{r}
+df2 = data.frame(Date = as.Date(data$Invoice.Date, format = "%m/%d/%Y"),Region = data$Region,Total_Sales= data$Total.Sales)
+head(df2,10)
+library(dplyr)
+
+
+library(scales)
+library(ggplot2)
+
+df_agg2 <- df2 %>%
+  group_by(Region) %>%
+  summarise(Total_Earnings = sum(Total_Sales)) %>%
+  arrange(desc(Total_Earnings))
+# Analyze the Retailers Earnings with Total Earnings using Pie Chart 
+
+ggplot(df_agg2, aes(x = "", y = Total_Earnings, fill = Region)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar("y", start = 0) +
+  theme_void() +
+  theme(legend.position = "right") +
+  labs(title = "Region's Distribution",
+       fill = "Region",
+       y = "Total Earnings")
+
+
+```
+
+### Objective 4
+
+-   This objective is to analyze the earnings generated through different sales methods and compare them to the total earnings using a pie chart.
+-   This involves collecting earnings data categorized by sales method, aggregating the data to calculate total earnings for each method, and then visualizing these proportions in a pie chart.
+-   The goal is to gain insights into the contribution of each sales method to the overall earnings and to identify which methods are most effective in generating revenue.
+
+```{r}
+
+df3 = data.frame(Date = as.Date(data$Invoice.Date, format = "%m/%d/%Y"),Sales_method = data$Sales.Method,Total_Sales= data$Total.Sales)
+head(df3,10)
+
+library(dplyr)
+
+
+library(scales)
+library(ggplot2)
+
+df_agg1 <- df3 %>%
+  group_by(Sales_method) %>%
+  summarise(Total_Earnings = sum(Total_Sales)) %>%
+  arrange(desc(Total_Earnings))
+# Analyze the Retailers Earnings with Total Earnings using Pie Chart 
+
+ggplot(df_agg1, aes(x = "", y = Total_Earnings, fill = Sales_method)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar("y", start = 0) +
+  theme_void() +
+  theme(legend.position = "right") +
+  labs(title = "Sales method Distribution",
+       fill = "Sales_Method",
+       y = "Total Earnings")
+
+
+```
