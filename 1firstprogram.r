@@ -2,30 +2,37 @@ v <- TRUE
 print(class(v))
 name <- "first program in R"
 print(class(name))
+
+a <- c(1,2,3,4,5,6)
+
+
+print(typeof(7))
 # # print(name)
 
-# # # Integer
-# # m <- 2L
+# Integer
+m <- c(2L,3L,4L)
 
-# # # numeric
-# # x <- 2
+print(typeof(m))
 
-# # # numeric
-# # n <- m*x
+# numeric
+x <- 2
 
-# # # numeric
-# # l <- 9.4
+# numeric
+n <- m*x
 
-# # # complex
-# # u <- 20 + 50i
-# # s <- 10 + 100i
+# numeric
+l <- 9.4
 
-# # print(u+s)
- 
-# # print(class(n))
-# # print(class(u))
+# complex
+u <- 20 + 50i
+s <- 10 + 100i
 
-# # # Getting input
+print(u+s)
+
+print(class(n))
+print(class(u))
+
+# Getting input
 # # # name1 <- readline('What is your name : ')
 # # # print("Welcome")
 # # # print(name1)
@@ -33,15 +40,15 @@ print(class(name))
 
 # # list <- 23L
 
-# # var_name2. =1
-
+var_name.2. =1
+print(var_name.2.)
 # # #Dot can be used first but it is not followed by the number, if followed by number then it is invalid
-# # .var_name =3
-# # print(.var_name)
+.var_name =3
+print(.var_name)
 
-# # print(var_name2.)
+print(var_name2.)
 
-# # cat("This is printed by using cat function", name, '\n')
+cat("This is printed by using cat function", name, '\n')
 # # print("hi")
 
 # # x <- 4

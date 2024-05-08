@@ -23,8 +23,11 @@
 x <- list(c(1,2,3,4),'A',sin,TRUE)
 print(x)
 print(x[1])
+a <- x[1]
+print(a[[1]])
 
-
+y <- list(c(1,2,3))
+print(y[[1]])
 # Array
 
 # While matrices are confined to two dimensions, arrays can be of any number of 
@@ -34,8 +37,8 @@ print(x[1])
 
 
 a = array ( c('orange','white','green'), dim=c(4,4,1) );
-m = matrix(a)
-
+m = matrix(a,4,4,1)
+print(m)
 print(t(m))
 print(a)
 
@@ -55,8 +58,8 @@ cat(crayon::blue("Hi"))
 # # in one level it will not store any duplicate values 
 # # factor may accept any matrix or vector or array
 
-app1= array(c(1,2,3,4,5),c(6,7,8,9,10),dimnames=list(10,10,1) )
-
+app1= array(c(1,2,3,4,5),dim=list(10,10,1) )
+app1
 array?
 
 print("\n")
@@ -65,7 +68,7 @@ fac_app= factor(app1)
 fac_app
 print(fac_app)
 print(nlevels(fac_app))
-
+print(as.numeric(levels(fac_app)))
 
 
 # Data frames
@@ -73,11 +76,11 @@ print(nlevels(fac_app))
 # most important each vector or array  should contains same length
 
 # BMI = data.frame(gender=c("Male","Male","Female"),height=c(152,171.5,165),weight=c(81,93,78),Age=c(42,38,26))
-# print(BMI)
-# plot(c(1,2,3,5,6,7))
-# plot(BMI)
+print(BMI)
+plot(c(1,2,3,5,6,7))
+plot(BMI)
 # ?
-# plot(3,400000)
+plot(3,400000)
 # 
 # data.table(BMI) 
 

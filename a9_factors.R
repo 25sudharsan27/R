@@ -1,8 +1,8 @@
 
 
-first <- array(c(c("subash","ramnaath","divya"),c("asdfadsf","qrqewrqwa"))
+first <- array(c(c("subash","ramnaath","divya"),c("asdfadsf","qrqewrqwa")))
 fac <- factor(first)
-fac[6]
+levels(fac)
 
 
 

@@ -1,9 +1,10 @@
 # (+) ( - ) ( * ) ( / )  ( ** or ^ ) 
 
-a <- 10
-b <- 4
+a <- 11L
+b <- 2
 
-print(a*b)
+print(typeof(a*b))
+
 print(a-b)
 print(a+b)
 print(a/b)
@@ -11,4 +12,4 @@ print(a**b)
 print(a^b)
 print(a%%b)
 # here the operation is for quotient
-print(a%/%b) 
+print(a%/%b)

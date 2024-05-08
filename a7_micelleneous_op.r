@@ -18,4 +18,4 @@ M = matrix(c(1:12) , 4, 3 , FALSE)
 
 #to multiply the both of the matrices we have to use %*%
 print(M)
-#print(M %*% t(M) )
+print(M %*% t(M) )

@@ -15,3 +15,5 @@ cat(as.integer(a) * as.integer(b)*as.integer(c))
 cat("\n")
 
 print("----------------------------------------")
+
+print(is.na(a))

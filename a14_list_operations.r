@@ -15,7 +15,11 @@ l <- list(10:20)
 u <- list(20:30)
 vec <- unlist(l)
 vec1 <- unlist(u)
-
+l
+u
+class(vec
+      )
+class(vec1)
 v <- vec + vec1
 v
 

@@ -51,7 +51,7 @@ print(cha)
 
 # c function also used to combine two vector
 
-p <- c(1,2,3,4,5,6)
+p <- c(1,2,3,4,5,6,"HI")
 q <- c("subham","arpita","rishka","gunjan","vaishali","sumit")
 r <- c(p,q)
 print(r)
@@ -60,7 +60,7 @@ print(r)
 
 print(q[c(2,4,4,3)])
 
-print(q[-2])
+print(q[-1])
 
 z=c("TensorFlow","Pytorch","Python")
 

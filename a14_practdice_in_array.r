@@ -59,13 +59,13 @@ final <- emp_data[4,5,]
 print(final)
 
 
-x <- emp.data
+x <- emp_data
 
 # Adding row in the data frame
 x <- list(6,"VAishali",537,"2015-09-01")
 emp_data=rbind(emp_data,x)
-
+emp_data
 # Adding the column in the data frame
-y <- c("Moradabad","Lucknow","Etah","Sambhal","Kurja")
+y <- c("Moradabad","Lucknow","Etah","Sambhal","Kurja","just")
 emp_data=cbind(emp_data,Address=y)
 emp_data
